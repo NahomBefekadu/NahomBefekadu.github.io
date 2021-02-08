@@ -1,0 +1,47 @@
+.experience {
+  &__intro {
+    @include breakpoint-up(medium) {
+      align-self: center;
+    }
+    padding-left: 1.8rem;
+    margin-bottom: 2rem;
+    @include breakpoint-up(large) {
+      width: 50%;
+    }
+  }
+  &__grid {
+    @include breakpoint-up(large) {
+      display: flex;
+    }
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    padding: 1.8rem;
+    @include breakpoint-up(large) {
+      flex: 1;
+    }
+    @include breakpoint-up(medium) {
+      flex: 0 0 50%;
+    }
+  }
+  &__icon {
+    margin-bottom: 1.2rem;
+    .image {
+      width: 10rem;
+    }
+  }
+  &__title {
+    margin-bottom: 0.37rem;
+    font-size: $font-med;
+    @include breakpoint-up(large) {
+      font-size: $font-large;
+    }
+  }
+  &__description {
+    line-height: 1.5rem;
+    font-size: 1rem;
+  }
+}

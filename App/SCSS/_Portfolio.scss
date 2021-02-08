@@ -1,0 +1,52 @@
+.Portfolio {
+  overflow-x: hidden;
+  &__intro {
+    @include breakpoint-up(medium) {
+      align-self: center;
+    }
+    padding-left: 1.8rem;
+    margin-bottom: 2rem;
+    @include breakpoint-up(large) {
+      width: 50%;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+    }
+  }
+
+  .has-marg-left {
+    @include breakpoint-up(large) {
+      align-self: left;
+      position: relative;
+      right: 2rem;
+    }
+  }
+
+  &__description {
+    margin: auto;
+    flex: 1;
+  }
+  &__img {
+    flex: 1;
+    height: 100%;
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    max-width: 100%;
+  }
+}
+.testing {
+  padding: 1.2rem;
+  height: 100%;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  max-width: 100%;
+}

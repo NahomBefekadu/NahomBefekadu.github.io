@@ -1,0 +1,42 @@
+.Nexperience {
+  &__intro {
+    @include breakpoint-up(medium) {
+      align-self: center;
+    }
+    padding-left: 1.8rem;
+    margin-bottom: 2rem;
+    @include breakpoint-up(large) {
+      width: 50%;
+    }
+  }
+  &__box {
+    border-left: 4px solid $mainRed;
+    border-radius: 0.8rem;
+    background-color: $lightgrey;
+    position: relative;
+    list-style: none;
+    text-align: left;
+    @include breakpoint-up(large) {
+      display: flex;
+    }
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__timeline {
+    padding: 1.8rem;
+    @include breakpoint-up(large) {
+      flex: 1;
+    }
+    @include breakpoint-up(medium) {
+      margin: 0 0 0 auto;
+    }
+  }
+  &__items {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+  }
+}

@@ -1,0 +1,67 @@
+.hero {
+  width: 100%;
+  background: url("/images/Subtract.svg") center no-repeat;
+  background-size: cover;
+  padding-bottom: 26rem;
+  //position: relative;
+  .container {
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__Image {
+    position: relative;
+    background-image: url("/images/Me.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 26rem;
+
+    //tablet screens
+    @include breakpoint-up(medium) {
+      min-height: 45rem;
+      background-position: center 70%;
+    }
+    //desktop
+    @include breakpoint-up(large) {
+      flex: 3;
+      order: 1;
+      height: 60rem;
+      background-image: none;
+    }
+
+    &::before {
+      @include breakpoint-up(large) {
+        content: "";
+        position: absolute;
+        background-image: url("/images/Me.svg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        height: 100%;
+        width: 150%;
+        right: 0;
+        background-position: left center;
+        background-position: 0% 81%;
+      }
+    }
+  }
+  &__Text {
+    text-align: left;
+    @include breakpoint-up(large) {
+      flex: 2;
+      order: 2;
+    }
+    .specific-name {
+      margin-top: 0;
+      padding-top: 0;
+      color: $cream;
+      margin-bottom: 2.5rem;
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: 2.5rem;
+    }
+  }
+}

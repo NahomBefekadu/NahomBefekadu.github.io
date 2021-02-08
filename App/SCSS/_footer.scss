@@ -1,0 +1,122 @@
+/*footer start*/
+.footer {
+  width: 100%;
+  background: url("/images/SubtractFooter.svg") center no-repeat;
+  background-size: cover;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+
+  &__grids {
+    @include breakpoint-up(large) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "logo section1 section2 cta arrow"
+        "social section1 section2 cta arrow";
+      gap: 1rem;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    @include breakpoint-down(medium) {
+      margin-bottom: 1.875rem;
+    }
+    @include breakpoint-up(large) {
+      grid-area: logo;
+    }
+  }
+  &__social {
+    margin-bottom: 1.875rem;
+    a {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+    a:hover {
+      transform: scale(2);
+      transition: transform 650ms;
+    }
+    @include breakpoint-up(large) {
+      grid-area: social;
+      align-self: end;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1rem;
+    &.section1 {
+      @include breakpoint-up(large) {
+        grid-area: section1;
+      }
+    }
+    &.section2 {
+      margin-bottom: 1.875rem;
+      @include breakpoint-up(large) {
+        grid-area: section2;
+      }
+    }
+    a {
+      line-height: 2;
+    }
+  }
+  &__cta {
+    a.button {
+      margin-bottom: 1rem;
+    }
+    @include breakpoint-up(large) {
+      grid-area: cta;
+    }
+  }
+  &__copyright {
+    margin-bottom: 1.875rem;
+  }
+
+  &__arrow {
+    width: 5rem;
+    height: 5rem;
+    background-color: $cream;
+    border-radius: 100%;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+    position: relative;
+    margin-top: 1rem;
+    left: 138px;
+    i {
+      color: $mainRed;
+      font-size: 4rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      position: absolute;
+      right: 26px;
+      top: 2px;
+    }
+    @include breakpoint-up(large) {
+      grid-area: arrow;
+    }
+  }
+  a:link {
+    color: $black;
+  }
+
+  /* visited link */
+  a:visited {
+    color: $black;
+  }
+  a button:visited {
+    color: $offRed;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: $offBlue;
+  }
+
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+}
